@@ -1,32 +1,30 @@
 pipeline {
     agent any
 
-    tools{
+    tools {
         nodejs "nodejs"
     }
-    
-    stage{
 
-        stage("install"){
-            steps{
+    stages {
+        stage("Install") {
+            steps {
                 sh 'npm install'
             }
         }
 
-        stage("build"){
-            steps{
+        stage("Build") {
+            steps {
                 sh 'npm run build'
             }
         }
     }
 
-    post{
-        success{
+    post {
+        success {
             echo "SUCCESS"
         }
-        failure{
+        failure {
             echo "FAILED"
         }
     }
-    
 }
