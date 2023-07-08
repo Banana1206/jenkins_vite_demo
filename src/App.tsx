@@ -9,6 +9,7 @@ function App() {
     <Provider>
     {/* <CartTable/>
     <OrderSummary/> */}
+    <h1>SUCCESS</h1>
     <CartPage />
     </Provider>
     </>
